@@ -21,10 +21,10 @@ CÁC CỔNG THANH TOÁN
     - Mã OTP: 123456
     
 2. MOMO
-    Số thẻ: 9704 0000 0000 0018
-    Tên chủ thẻ: NGUYEN VAN A
-    Ngày phát hành: 03/07
-    Mã OTP: OTP
+    - Số thẻ: 9704 0000 0000 0018
+    - Tên chủ thẻ: NGUYEN VAN A
+    - Ngày phát hành: 03/07
+    - Mã OTP: OTP
 
 ![alt text](image.png)
 
@@ -119,10 +119,10 @@ CÁC CỔNG THANH TOÁN
 
 
 Cấu hình pusher(lúc nào dùng thì chạy để dùng job: php artisan queue:work )
-PUSHER_APP_ID=1877200
-PUSHER_APP_KEY=1393e8dc64cdba3b56ad
-PUSHER_APP_SECRET=34f630d99b8a7dd390f1
-PUSHER_HOST=
-PUSHER_PORT=443
-PUSHER_SCHEME=https
-PUSHER_APP_CLUSTER=ap1
+- PUSHER_APP_ID=1877200
+- PUSHER_APP_KEY=1393e8dc64cdba3b56ad
+- PUSHER_APP_SECRET=34f630d99b8a7dd390f1
+- PUSHER_HOST=
+- PUSHER_PORT=443
+- PUSHER_SCHEME=https
+- PUSHER_APP_CLUSTER=ap1
