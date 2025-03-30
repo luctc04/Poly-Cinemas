@@ -191,7 +191,10 @@
 
             if (!file_exists($filePath)) {
                 try {
-                    $barcodeImage = DNS1D::getBarcodePNG($ticket->code, 'C128', 1.5, 50, [0, 0, 0]);
+                    
+                    $barcodeImage = DNS1D::getBarcodePNG($ticket->code, 'C128', (int)1.5, (int)50, [0, 0, 0]); //cái này tạo đc cả khi mà deploy lên server
+
+                    // $barcodeImage = DNS1D::getBarcodePNG($ticket->code, 'C128', 1.5, 50, [0, 0, 0]); //cái này chỉ tạo đc khi chạy ở local 
                     file_put_contents($filePath, base64_decode($barcodeImage));
                 } catch (\Exception $e) {
                     \Log::error('Không thể tạo mã vạch: ' . $e->getMessage());
@@ -275,11 +278,23 @@
             <table class="info-table">
                 <tr>
                     <th>Khuyễn mãi</th>
-                    <td>{{ number_format($ticket->voucher_discount, 0, ',', '.') }}đ</td>
+                    <td>
+                        @if ($ticket->voucher_discount == null)
+                            0đ
+                        @else
+                            {{ number_format($ticket->voucher_discount, 0, ',', '.') }}đ
+                        @endif
+                    </td>
                 </tr>
                 <tr>
                     <th>Điểm Poly</th>
-                    <td>{{ number_format($ticket->point_discount, 0, ',', '.') }}đ</td>
+                    <td>
+                        @if ($ticket->point_discount == null)
+                            0đ
+                        @else
+                            {{ number_format($ticket->point_discount, 0, ',', '.') }}đ
+                        @endif
+                    </td>
                 </tr>
             </table>
             <hr>
