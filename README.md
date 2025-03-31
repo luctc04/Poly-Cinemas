@@ -8,10 +8,6 @@ Quản lý cơ sở Hà Đông :
   - Tk: quanlycosoHaDong@fpt.edu.vn
   - Mk: quanlycosoHaDong@fpt.edu.vn
     
-Khách hàng :
-  - Tk: luctcph37171@fpt.edu.vn
-  - Mk: luctcph37171@fpt.edu.vn
-
 CÁC CỔNG THANH TOÁN
 1. VNPAY
     - Ngân hàng: NCB
